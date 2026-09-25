@@ -1,0 +1,3504 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Modern Naree × Pattern Vali</title>
+
+<meta name="description"
+content="Modern Naree × Pattern Vali — Contemporary Indian Fashion">
+
+<style>
+
+/* =========================
+   GLOBAL
+========================= */
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  background:#080808;
+  color:#fff;
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+  overflow-x:hidden;
+}
+
+a{
+  color:inherit;
+  text-decoration:none;
+}
+
+button{
+  font-family:inherit;
+}
+
+
+/* =========================
+   INTRO
+========================= */
+
+#intro{
+  position:fixed;
+  inset:0;
+  z-index:99999;
+  background:#050505;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+}
+
+.intro-inner{
+  padding:30px;
+}
+
+.intro-small{
+  font-size:11px;
+  letter-spacing:5px;
+  color:#999;
+  margin-bottom:22px;
+}
+
+.intro-title{
+  font-size:
+    clamp(42px,9vw,105px);
+  line-height:.9;
+  font-weight:900;
+  letter-spacing:-5px;
+}
+
+.intro-title span{
+  display:block;
+}
+
+.intro-sub{
+  margin-top:25px;
+  color:#aaa;
+  font-size:12px;
+  letter-spacing:3px;
+}
+
+.enter-btn{
+  margin-top:35px;
+  padding:15px 28px;
+  border:1px solid #444;
+  background:#fff;
+  color:#000;
+  cursor:pointer;
+  font-size:12px;
+  letter-spacing:2px;
+  transition:.3s;
+}
+
+.enter-btn:hover{
+  background:#ddd;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+header{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  z-index:9000;
+  padding:20px 6%;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  background:
+    linear-gradient(
+      rgba(5,5,5,.92),
+      rgba(5,5,5,.2)
+    );
+  backdrop-filter:blur(10px);
+}
+
+.logo{
+  font-size:17px;
+  font-weight:800;
+  letter-spacing:2px;
+}
+
+.logo span{
+  color:#999;
+}
+
+nav{
+  display:flex;
+  gap:28px;
+  font-size:11px;
+  letter-spacing:2px;
+}
+
+nav a{
+  color:#bbb;
+  transition:.3s;
+}
+
+nav a:hover{
+  color:#fff;
+}
+
+.nav-bag{
+  border:1px solid #444;
+  padding:9px 14px;
+  cursor:pointer;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero{
+  min-height:100vh;
+  position:relative;
+  display:flex;
+  align-items:center;
+  padding:130px 7% 80px;
+  overflow:hidden;
+  background:
+    radial-gradient(
+      circle at 75% 35%,
+      #2a211d 0,
+      #100d0c 28%,
+      #080808 60%
+    );
+}
+
+.hero-bg{
+  position:absolute;
+  right:-10%;
+  top:10%;
+  width:65vw;
+  height:80vh;
+  border-radius:50%;
+  opacity:.22;
+  background:
+    repeating-linear-gradient(
+      45deg,
+      #b49a7a 0 2px,
+      transparent 2px 14px
+    );
+  transform:rotate(-8deg);
+}
+
+.hero-content{
+  position:relative;
+  z-index:2;
+  max-width:850px;
+}
+
+.hero-kicker{
+  color:#999;
+  font-size:11px;
+  letter-spacing:5px;
+  margin-bottom:25px;
+}
+
+.hero h1{
+  font-size:
+    clamp(55px,11vw,150px);
+  line-height:.82;
+  letter-spacing:-7px;
+  font-weight:900;
+}
+
+.hero h1 span{
+  color:#777;
+}
+
+.hero-text{
+  max-width:500px;
+  color:#aaa;
+  line-height:1.8;
+  margin-top:30px;
+  font-size:15px;
+}
+
+.hero-buttons{
+  display:flex;
+  gap:12px;
+  margin-top:35px;
+  flex-wrap:wrap;
+}
+
+.btn{
+  padding:15px 25px;
+  border:1px solid #555;
+  background:#fff;
+  color:#000;
+  cursor:pointer;
+  font-size:11px;
+  letter-spacing:2px;
+  transition:.3s;
+}
+
+.btn.dark{
+  background:transparent;
+  color:#fff;
+}
+
+.btn:hover{
+  transform:translateY(-3px);
+}
+
+
+/* =========================
+   MARQUEE
+========================= */
+
+.marquee{
+  overflow:hidden;
+  border-top:1px solid #222;
+  border-bottom:1px solid #222;
+  padding:17px 0;
+  white-space:nowrap;
+}
+
+.marquee-track{
+  display:inline-block;
+  animation:
+    marquee 22s linear infinite;
+}
+
+.marquee span{
+  margin-right:55px;
+  color:#777;
+  font-size:12px;
+  letter-spacing:4px;
+}
+
+@keyframes marquee{
+
+  from{
+    transform:translateX(0);
+  }
+
+  to{
+    transform:translateX(-50%);
+  }
+
+}
+
+
+/* =========================
+   COLLECTION
+========================= */
+
+.collection{
+  padding:100px 7%;
+}
+
+.section-head{
+  display:flex;
+  justify-content:space-between;
+  align-items:end;
+  gap:20px;
+  margin-bottom:45px;
+}
+
+.section-kicker{
+  font-size:10px;
+  color:#777;
+  letter-spacing:4px;
+}
+
+.section-title{
+  font-size:
+    clamp(38px,7vw,80px);
+  line-height:.9;
+  letter-spacing:-4px;
+}
+
+.section-description{
+  max-width:360px;
+  color:#888;
+  font-size:13px;
+  line-height:1.7;
+}
+
+
+/* =========================
+   PRODUCT GRID
+========================= */
+
+.product-grid{
+  display:grid;
+  grid-template-columns:
+    repeat(4,1fr);
+  gap:16px;
+}
+
+.product{
+  cursor:pointer;
+}
+
+.product-image{
+  height:470px;
+  position:relative;
+  overflow:hidden;
+  background:#181818;
+}
+
+.product-image::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  transition:.7s;
+}
+
+.product:hover
+.product-image::before{
+  transform:scale(1.08);
+}
+
+.product:nth-child(1)
+.product-image::before{
+  background:
+    linear-gradient(
+      135deg,
+      #cfc0ad,
+      #7d6d61,
+      #211c1a
+    );
+}
+
+.product:nth-child(2)
+.product-image::before{
+  background:
+    repeating-linear-gradient(
+      45deg,
+      #4c4037 0 12px,
+      #171411 12px 25px
+    );
+}
+
+.product:nth-child(3)
+.product-image::before{
+  background:
+    radial-gradient(
+      circle at 30% 30%,
+      #69635d,
+      #090909 60%
+    );
+}
+
+.product:nth-child(4)
+.product-image::before{
+  background:
+    repeating-linear-gradient(
+      -45deg,
+      #777064 0 8px,
+      #24211d 8px 20px
+    );
+}
+
+.product-tag{
+  position:absolute;
+  top:15px;
+  left:15px;
+  z-index:2;
+  padding:7px 10px;
+  background:#fff;
+  color:#000;
+  font-size:9px;
+  letter-spacing:2px;
+}
+
+.wishlist{
+  position:absolute;
+  right:15px;
+  top:12px;
+  z-index:5;
+  width:38px;
+  height:38px;
+  border:1px solid #777;
+  border-radius:50%;
+  background:#111b;
+  color:#fff;
+  font-size:18px;
+  cursor:pointer;
+}
+
+.product-info{
+  padding:17px 2px 35px;
+  display:flex;
+  justify-content:space-between;
+  gap:10px;
+}
+
+.product-info h3{
+  font-size:15px;
+  font-weight:500;
+}
+
+.product-info p{
+  color:#777;
+  font-size:11px;
+  margin-top:6px;
+}
+
+.product-price{
+  font-size:13px;
+}
+
+
+/* =========================
+   BRAND SECTIONS
+========================= */
+
+.brand{
+  min-height:650px;
+  position:relative;
+  display:flex;
+  align-items:center;
+  padding:90px 7%;
+  overflow:hidden;
+  border-top:1px solid #222;
+}
+
+.brand::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  opacity:.15;
+}
+
+.modern-brand::before{
+  background:
+    radial-gradient(
+      circle at 75% 40%,
+      #a58d76,
+      transparent 35%
+    );
+}
+
+.pattern-brand::before{
+  background:
+    repeating-linear-gradient(
+      45deg,
+      #806d59 0 2px,
+      transparent 2px 18px
+    );
+}
+
+.watermark{
+  position:absolute;
+  font-size:
+    clamp(70px,16vw,220px);
+  font-weight:900;
+  color:#fff;
+  opacity:.025;
+  white-space:nowrap;
+  right:-5%;
+  bottom:0;
+  letter-spacing:-10px;
+}
+
+.brand-content{
+  position:relative;
+  z-index:2;
+  max-width:700px;
+}
+
+.brand-content small{
+  color:#888;
+  letter-spacing:4px;
+  font-size:10px;
+}
+
+.brand-content h2{
+  font-size:
+    clamp(55px,10vw,120px);
+  line-height:.85;
+  letter-spacing:-6px;
+  margin:22px 0;
+}
+
+.brand-content p{
+  color:#999;
+  max-width:500px;
+  line-height:1.8;
+  font-size:14px;
+}
+
+.brand-btn{
+  display:inline-block;
+  margin-top:30px;
+  padding:14px 24px;
+  border:1px solid #555;
+  font-size:10px;
+  letter-spacing:2px;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:900px){
+
+  nav{
+    display:none;
+  }
+
+  .product-grid{
+    grid-template-columns:
+      repeat(2,1fr);
+  }
+
+  .product-image{
+    height:400px;
+  }
+
+  .section-head{
+    display:block;
+  }
+
+  .section-description{
+    margin-top:20px;
+  }
+
+}
+
+@media(max-width:600px){
+
+  header{
+    padding:17px 5%;
+  }
+
+  .logo{
+    font-size:13px;
+  }
+
+  .hero{
+    padding:
+      120px 6% 70px;
+  }
+
+  .hero h1{
+    letter-spacing:-4px;
+  }
+
+  .hero-text{
+    font-size:13px;
+  }
+
+  .product-grid{
+    grid-template-columns:1fr;
+  }
+
+  .product-image{
+    height:500px;
+  }
+
+  .brand{
+    min-height:570px;
+    padding:70px 6%;
+  }
+
+  .brand-content h2{
+    letter-spacing:-4px;
+  }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+
+<!-- INTRO -->
+
+<div id="intro">
+
+  <div class="intro-inner">
+
+    <div class="intro-small">
+      CONTEMPORARY INDIAN FASHION · 2026
+    </div>
+
+    <div class="intro-title">
+
+      <span>MODERN</span>
+
+      <span>NAREE</span>
+
+      <span style="color:#777;">
+        × PATTERN VALI
+      </span>
+
+    </div>
+
+    <div class="intro-sub">
+      TRADITION MEETS TODAY
+    </div>
+
+    <button
+      class="enter-btn"
+      onclick="enterSite()">
+
+      ENTER COLLECTION →
+
+    </button>
+
+  </div>
+
+</div>
+
+
+<!-- HEADER -->
+
+<header>
+
+  <a
+    href="#home"
+    class="logo">
+
+    MODERN NAREE
+    <span>×</span>
+    PATTERN VALI
+
+  </a>
+
+  <nav>
+
+    <a href="#home">
+      HOME
+    </a>
+
+    <a href="#collection">
+      COLLECTION
+    </a>
+
+    <a href="#modern">
+      MODERN NAREE
+    </a>
+
+    <a href="#pattern">
+      PATTERN VALI
+    </a>
+
+    <a href="#about">
+      ABOUT
+    </a>
+
+  </nav>
+
+  <div
+    class="nav-bag"
+    onclick="openCart()">
+
+    BAG ·
+    <span id="cartCount">
+      0
+    </span>
+
+  </div>
+
+</header>
+
+
+<!-- HERO -->
+
+<section
+  class="hero"
+  id="home">
+
+  <div class="hero-bg"></div>
+
+  <div class="hero-content">
+
+    <div class="hero-kicker">
+      THE WOMEN'S EDIT · 2026
+    </div>
+
+    <h1>
+      TRADITION
+      <span>REDEFINED.</span>
+    </h1>
+
+    <p class="hero-text">
+
+      Modern silhouettes.
+      Expressive prints.
+      Indian craftsmanship.
+      A new language of fashion
+      created by Modern Naree
+      and Pattern Vali.
+
+    </p>
+
+    <div class="hero-buttons">
+
+      <a
+        href="#collection"
+        class="btn">
+
+        SHOP COLLECTION →
+
+      </a>
+
+      <a
+        href="#modern"
+        class="btn dark">
+
+        EXPLORE BRANDS
+
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- MARQUEE -->
+
+<div class="marquee">
+
+  <div class="marquee-track">
+
+    <span>
+      MODERN NAREE
+    </span>
+
+    <span>
+      PATTERN VALI
+    </span>
+
+    <span>
+      PRINT · PATTERN · CULTURE
+    </span>
+
+    <span>
+      MODERN NAREE
+    </span>
+
+    <span>
+      PATTERN VALI
+    </span>
+
+    <span>
+      PRINT · PATTERN · CULTURE
+    </span>
+
+  </div>
+
+</div>
+
+
+<!-- COLLECTION -->
+
+<section
+  class="collection"
+  id="collection">
+
+  <div class="section-head">
+
+    <div>
+
+      <div class="section-kicker">
+        NEW DROP · 2026
+      </div>
+
+      <h2 class="section-title">
+        THE EDIT
+      </h2>
+
+    </div>
+
+    <p class="section-description">
+
+      Curated pieces from
+      Modern Naree and Pattern Vali —
+      designed for effortless,
+      contemporary Indian style.
+
+    </p>
+
+  </div>
+
+
+  <div class="product-grid">
+
+
+    <!-- PRODUCT 1 -->
+
+    <div
+      class="product"
+      onclick="
+      openProduct(
+      'Ivory Heritage',
+      'Modern Naree',
+      2790
+      )">
+
+      <div class="product-image">
+
+        <span class="product-tag">
+          NEW
+        </span>
+
+        <button
+          class="wishlist"
+          onclick="
+          event.stopPropagation();
+          toggleWish(this)">
+
+          ♡
+
+        </button>
+
+      </div>
+
+      <div class="product-info">
+
+        <div>
+
+          <h3>
+            Ivory Heritage
+          </h3>
+
+          <p>
+            MODERN NAREE
+          </p>
+
+        </div>
+
+        <strong class="product-price">
+          ₹2,790
+        </strong>
+
+      </div>
+
+    </div>
+
+
+    <!-- PRODUCT 2 -->
+
+    <div
+      class="product"
+      onclick="
+      openProduct(
+      'Earth Pattern',
+      'Pattern Vali',
+      3190
+      )">
+
+      <div class="product-image">
+
+        <span class="product-tag">
+          EDIT
+        </span>
+
+        <button
+          class="wishlist"
+          onclick="
+          event.stopPropagation();
+          toggleWish(this)">
+
+          ♡
+
+        </button>
+
+      </div>
+
+      <div class="product-info">
+
+        <div>
+
+          <h3>
+            Earth Pattern
+          </h3>
+
+          <p>
+            PATTERN VALI
+          </p>
+
+        </div>
+
+        <strong class="product-price">
+          ₹3,190
+        </strong>
+
+      </div>
+
+    </div>
+
+
+    <!-- PRODUCT 3 -->
+
+    <div
+      class="product"
+      onclick="
+      openProduct(
+      'Midnight Weave',
+      'Modern Naree',
+      3490
+      )">
+
+      <div class="product-image">
+
+        <span class="product-tag">
+          NEW
+        </span>
+
+        <button
+          class="wishlist"
+          onclick="
+          event.stopPropagation();
+          toggleWish(this)">
+
+          ♡
+
+        </button>
+
+      </div>
+
+      <div class="product-info">
+
+        <div>
+
+          <h3>
+            Midnight Weave
+          </h3>
+
+          <p>
+            MODERN NAREE
+          </p>
+
+        </div>
+
+        <strong class="product-price">
+          ₹3,490
+        </strong>
+
+      </div>
+
+    </div>
+
+
+    <!-- PRODUCT 4 -->
+
+    <div
+      class="product"
+      onclick="
+      openProduct(
+      'Signature Print',
+      'Pattern Vali',
+      3890
+      )">
+
+      <div class="product-image">
+
+        <span class="product-tag">
+          LIMITED
+        </span>
+
+        <button
+          class="wishlist"
+          onclick="
+          event.stopPropagation();
+          toggleWish(this)">
+
+          ♡
+
+        </button>
+
+      </div>
+
+      <div class="product-info">
+
+        <div>
+
+          <h3>
+            Signature Print
+          </h3>
+
+          <p>
+            PATTERN VALI
+          </p>
+
+        </div>
+
+        <strong class="product-price">
+          ₹3,890
+        </strong>
+
+      </div>
+
+    </div>
+
+
+  </div>
+
+</section>
+
+
+<!-- MODERN NAREE -->
+
+<section
+  class="brand modern-brand"
+  id="modern">
+
+  <div class="watermark">
+    MODERN NAREE
+  </div>
+
+  <div class="brand-content">
+
+    <small>
+      THE WOMEN'S EDIT · 2026
+    </small>
+
+    <h2>
+      MODERN<br>
+      NAREE
+    </h2>
+
+    <p>
+
+      Contemporary Indian fashion
+      with refined silhouettes,
+      premium detailing and a
+      modern feminine identity.
+
+    </p>
+
+    <a
+      href="#collection"
+      class="brand-btn">
+
+      SHOP MODERN NAREE →
+
+    </a>
+
+  </div>
+
+</section>
+
+
+<!-- PATTERN VALI -->
+
+<section
+  class="brand pattern-brand"
+  id="pattern">
+
+  <div class="watermark">
+    PATTERN VALI
+  </div>
+
+  <div class="brand-content">
+
+    <small>
+      PRINT · PATTERN · CULTURE · 2026
+    </small>
+
+    <h2>
+      PATTERN<br>
+      VALI
+    </h2>
+
+    <p>
+
+      Statement prints,
+      expressive patterns and
+      contemporary Indian designs
+      made for everyday style.
+
+    </p>
+
+    <a
+      href="#collection"
+      class="brand-btn">
+
+      SHOP PATTERN VALI →
+
+    </a>
+
+  </div>
+
+</section>
+
+
+<!-- PART 1 ENDS HERE -->
+  <!-- =========================================
+     PART 2/5 — ABOUT + CONTACT + FOOTER
+========================================= -->
+
+
+<!-- ABOUT -->
+
+<section
+  id="about"
+  style="
+    padding:110px 7%;
+    background:#0d0d0d;
+    border-top:1px solid #222;
+  ">
+
+  <div
+    style="
+      max-width:900px;
+      margin:auto;
+      text-align:center;
+    ">
+
+    <div
+      style="
+        color:#777;
+        font-size:10px;
+        letter-spacing:5px;
+        margin-bottom:22px;
+      ">
+
+      OUR STORY · 2026
+
+    </div>
+
+
+    <h2
+      style="
+        font-size:clamp(45px,8vw,90px);
+        line-height:.9;
+        letter-spacing:-5px;
+        margin-bottom:35px;
+      ">
+
+      ABOUT<br>
+      <span style="color:#777;">
+        OUR BRANDS
+      </span>
+
+    </h2>
+
+
+    <p
+      style="
+        color:#999;
+        font-size:15px;
+        line-height:2;
+        max-width:720px;
+        margin:auto;
+      ">
+
+      Modern Naree × Pattern Vali is a
+      contemporary Indian fashion destination
+      created for women who love traditional
+      Indian aesthetics with a modern expression.
+
+      <br><br>
+
+      Our collections bring together refined
+      silhouettes, expressive prints, beautiful
+      patterns and premium details — designed
+      for confident, comfortable and effortless
+      elegance.
+
+      <br><br>
+
+      From the refined identity of Modern Naree
+      to the expressive world of Pattern Vali,
+      every piece celebrates Indian fashion
+      while giving it a fresh, contemporary
+      personality.
+
+    </p>
+
+  </div>
+
+</section>
+
+
+
+<!-- CONTACT -->
+
+<section
+  id="contact"
+  style="
+    padding:100px 7%;
+    background:#080808;
+    border-top:1px solid #222;
+  ">
+
+  <div
+    style="
+      max-width:1000px;
+      margin:auto;
+    ">
+
+
+    <div
+      style="
+        text-align:center;
+        margin-bottom:55px;
+      ">
+
+      <div
+        style="
+          color:#777;
+          font-size:10px;
+          letter-spacing:5px;
+        ">
+
+        GET IN TOUCH
+
+      </div>
+
+
+      <h2
+        style="
+          font-size:clamp(45px,8vw,85px);
+          letter-spacing:-5px;
+          margin-top:15px;
+        ">
+
+        CONTACT
+
+      </h2>
+
+    </div>
+
+
+
+    <div
+      style="
+        display:grid;
+        grid-template-columns:
+        repeat(2,1fr);
+        gap:18px;
+      ">
+
+
+      <!-- WHATSAPP -->
+
+      <a
+        href="https://wa.me/919582907643"
+        target="_blank"
+        style="
+          display:block;
+          padding:30px;
+          background:#111;
+          border:1px solid #292929;
+          transition:.3s;
+        ">
+
+        <div
+          style="
+            color:#777;
+            font-size:10px;
+            letter-spacing:3px;
+            margin-bottom:12px;
+          ">
+
+          WHATSAPP
+
+        </div>
+
+
+        <strong
+          style="
+            font-size:20px;
+          ">
+
+          9582907643
+
+        </strong>
+
+
+        <p
+          style="
+            color:#777;
+            font-size:12px;
+            margin-top:10px;
+          ">
+
+          Chat with us →
+
+        </p>
+
+      </a>
+
+
+
+      <!-- EMAIL -->
+
+      <a
+        href="mailto:modernnaree13@gmail.com"
+        style="
+          display:block;
+          padding:30px;
+          background:#111;
+          border:1px solid #292929;
+        ">
+
+        <div
+          style="
+            color:#777;
+            font-size:10px;
+            letter-spacing:3px;
+            margin-bottom:12px;
+          ">
+
+          EMAIL
+
+        </div>
+
+
+        <strong
+          style="
+            font-size:17px;
+            word-break:break-word;
+          ">
+
+          modernnaree13@gmail.com
+
+        </strong>
+
+
+        <p
+          style="
+            color:#777;
+            font-size:12px;
+            margin-top:10px;
+          ">
+
+          Send us an email →
+
+        </p>
+
+      </a>
+
+
+
+      <!-- ADDRESS -->
+
+      <div
+        style="
+          padding:30px;
+          background:#111;
+          border:1px solid #292929;
+        ">
+
+        <div
+          style="
+            color:#777;
+            font-size:10px;
+            letter-spacing:3px;
+            margin-bottom:12px;
+          ">
+
+          LOCATION
+
+        </div>
+
+
+        <strong
+          style="
+            font-size:17px;
+          ">
+
+          Loni, Ghaziabad
+
+        </strong>
+
+
+        <p
+          style="
+            color:#777;
+            font-size:12px;
+            line-height:1.7;
+            margin-top:10px;
+          ">
+
+          Uttar Pradesh - 201102<br>
+          India
+
+        </p>
+
+      </div>
+
+
+
+      <!-- INSTAGRAM -->
+
+      <a
+        href="https://instagram.com/pattern_vali26"
+        target="_blank"
+        style="
+          display:block;
+          padding:30px;
+          background:#111;
+          border:1px solid #292929;
+        ">
+
+        <div
+          style="
+            color:#777;
+            font-size:10px;
+            letter-spacing:3px;
+            margin-bottom:12px;
+          ">
+
+          INSTAGRAM
+
+        </div>
+
+
+        <strong
+          style="
+            font-size:20px;
+          ">
+
+          @pattern_vali26
+
+        </strong>
+
+
+        <p
+          style="
+            color:#777;
+            font-size:12px;
+            margin-top:10px;
+          ">
+
+          Follow our latest edits →
+
+        </p>
+
+      </a>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- FOOTER -->
+
+<footer
+  style="
+    padding:70px 7% 30px;
+    background:#030303;
+    border-top:1px solid #222;
+  ">
+
+
+  <div
+    style="
+      display:grid;
+      grid-template-columns:
+      1.5fr 1fr 1fr;
+      gap:50px;
+      max-width:1200px;
+      margin:auto;
+    ">
+
+
+    <!-- BRAND -->
+
+    <div>
+
+      <h3
+        style="
+          font-size:20px;
+          letter-spacing:2px;
+          margin-bottom:20px;
+        ">
+
+        MODERN NAREE
+        <span style="color:#555;">
+          ×
+        </span>
+        PATTERN VALI
+
+      </h3>
+
+
+      <p
+        style="
+          color:#666;
+          max-width:380px;
+          font-size:13px;
+          line-height:1.8;
+        ">
+
+        Contemporary Indian fashion
+        where tradition meets today's
+        expression.
+
+      </p>
+
+    </div>
+
+
+
+    <!-- EXPLORE -->
+
+    <div>
+
+      <div
+        style="
+          color:#777;
+          font-size:10px;
+          letter-spacing:3px;
+          margin-bottom:20px;
+        ">
+
+        EXPLORE
+
+      </div>
+
+
+      <a
+        href="#home"
+        style="
+          display:block;
+          color:#aaa;
+          font-size:13px;
+          margin:12px 0;
+        ">
+
+        Home
+
+      </a>
+
+
+      <a
+        href="#collection"
+        style="
+          display:block;
+          color:#aaa;
+          font-size:13px;
+          margin:12px 0;
+        ">
+
+        Collection
+
+      </a>
+
+
+      <a
+        href="#modern"
+        style="
+          display:block;
+          color:#aaa;
+          font-size:13px;
+          margin:12px 0;
+        ">
+
+        Modern Naree
+
+      </a>
+
+
+      <a
+        href="#pattern"
+        style="
+          display:block;
+          color:#aaa;
+          font-size:13px;
+          margin:12px 0;
+        ">
+
+        Pattern Vali
+
+      </a>
+
+    </div>
+
+
+
+    <!-- CONNECT -->
+
+    <div>
+
+      <div
+        style="
+          color:#777;
+          font-size:10px;
+          letter-spacing:3px;
+          margin-bottom:20px;
+        ">
+
+        CONNECT
+
+      </div>
+
+
+      <a
+        href="https://wa.me/919582907643"
+        target="_blank"
+        style="
+          display:block;
+          color:#aaa;
+          font-size:13px;
+          margin:12px 0;
+        ">
+
+        WhatsApp
+
+      </a>
+
+
+      <a
+        href="mailto:modernnaree13@gmail.com"
+        style="
+          display:block;
+          color:#aaa;
+          font-size:13px;
+          margin:12px 0;
+        ">
+
+        Email
+
+      </a>
+
+
+      <a
+        href="https://instagram.com/pattern_vali26"
+        target="_blank"
+        style="
+          display:block;
+          color:#aaa;
+          font-size:13px;
+          margin:12px 0;
+        ">
+
+        Instagram
+
+      </a>
+
+    </div>
+
+
+  </div>
+
+
+
+  <div
+    style="
+      max-width:1200px;
+      margin:60px auto 0;
+      padding-top:25px;
+      border-top:1px solid #181818;
+      color:#555;
+      font-size:11px;
+      text-align:center;
+    ">
+
+    © 2026 Modern Naree × Pattern Vali.
+    All Rights Reserved.
+
+  </div>
+
+
+</footer>
+
+
+<!-- PART 2 END -->
+  <!-- =========================================
+     PART 3/5 — QUICK VIEW + CART
+========================================= -->
+
+<!-- QUICK VIEW -->
+
+<div
+  id="quickView"
+  style="
+    position:fixed;
+    inset:0;
+    z-index:9998;
+    background:rgba(0,0,0,.82);
+    backdrop-filter:blur(12px);
+    display:none;
+    align-items:center;
+    justify-content:center;
+    padding:20px;
+  ">
+
+  <div
+    style="
+      width:min(900px,100%);
+      max-height:90vh;
+      overflow:auto;
+      background:#111;
+      border:1px solid #333;
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      position:relative;
+    ">
+
+    <button
+      onclick="closeProduct()"
+      style="
+        position:absolute;
+        right:18px;
+        top:15px;
+        z-index:5;
+        width:40px;
+        height:40px;
+        border:1px solid #555;
+        background:#111;
+        color:#fff;
+        border-radius:50%;
+        font-size:25px;
+        cursor:pointer;
+      ">
+      ×
+    </button>
+
+
+    <div
+      id="quickImage"
+      style="
+        min-height:500px;
+        background:
+        linear-gradient(
+          135deg,
+          #70655b,
+          #191715
+        );
+      ">
+    </div>
+
+
+    <div
+      style="
+        padding:60px 45px;
+        display:flex;
+        flex-direction:column;
+        justify-content:center;
+      ">
+
+      <div
+        style="
+          color:#777;
+          font-size:10px;
+          letter-spacing:4px;
+          margin-bottom:18px;
+        "
+        id="quickBrand">
+      </div>
+
+
+      <h2
+        id="quickName"
+        style="
+          font-size:45px;
+          line-height:.95;
+          letter-spacing:-3px;
+          margin-bottom:18px;
+        ">
+      </h2>
+
+
+      <div
+        id="quickPrice"
+        style="
+          font-size:22px;
+          margin-bottom:25px;
+        ">
+      </div>
+
+
+      <p
+        style="
+          color:#888;
+          line-height:1.8;
+          font-size:13px;
+          margin-bottom:30px;
+        ">
+
+        Contemporary Indian fashion
+        with refined detailing, expressive
+        design and a premium everyday
+        aesthetic.
+
+      </p>
+
+
+      <button
+        onclick="addCurrentProduct()"
+        style="
+          width:100%;
+          padding:17px;
+          border:0;
+          background:#fff;
+          color:#000;
+          cursor:pointer;
+          letter-spacing:2px;
+          font-size:11px;
+        ">
+
+        ADD TO BAG →
+
+      </button>
+
+    </div>
+
+  </div>
+
+</div>
+
+
+
+<!-- CART -->
+
+<div
+  id="cartOverlay"
+  style="
+    position:fixed;
+    inset:0;
+    z-index:9997;
+    background:rgba(0,0,0,.65);
+    display:none;
+  "
+  onclick="closeCart()">
+</div>
+
+
+<div
+  id="cartDrawer"
+  style="
+    position:fixed;
+    z-index:9999;
+    top:0;
+    right:0;
+    width:min(430px,100%);
+    height:100vh;
+    background:#0d0d0d;
+    border-left:1px solid #333;
+    transform:translateX(100%);
+    transition:.4s ease;
+    display:flex;
+    flex-direction:column;
+  ">
+
+
+  <div
+    style="
+      padding:25px;
+      border-bottom:1px solid #252525;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+    ">
+
+    <div>
+
+      <div
+        style="
+          color:#777;
+          font-size:9px;
+          letter-spacing:3px;
+        ">
+
+        YOUR SELECTION
+
+      </div>
+
+      <h2 style="margin-top:8px;">
+        YOUR BAG
+      </h2>
+
+    </div>
+
+
+    <button
+      onclick="closeCart()"
+      style="
+        width:40px;
+        height:40px;
+        border:1px solid #444;
+        background:#111;
+        color:#fff;
+        border-radius:50%;
+        font-size:22px;
+        cursor:pointer;
+      ">
+
+      ×
+
+    </button>
+
+  </div>
+
+
+
+  <div
+    id="cartItems"
+    style="
+      flex:1;
+      overflow:auto;
+      padding:20px;
+    ">
+  </div>
+
+
+
+  <div
+    style="
+      padding:25px;
+      border-top:1px solid #292929;
+    ">
+
+
+    <div
+      style="
+        display:flex;
+        justify-content:space-between;
+        margin-bottom:20px;
+      ">
+
+      <span
+        style="
+          color:#777;
+          font-size:12px;
+        ">
+
+        TOTAL
+
+      </span>
+
+
+      <strong
+        id="cartTotal"
+        style="
+          font-size:20px;
+        ">
+
+        ₹0
+
+      </strong>
+
+    </div>
+
+
+    <button
+      onclick="openCheckout()"
+      style="
+        width:100%;
+        padding:17px;
+        background:#fff;
+        color:#000;
+        border:0;
+        cursor:pointer;
+        letter-spacing:2px;
+        font-size:11px;
+      ">
+
+      CHECKOUT →
+
+    </button>
+
+  </div>
+
+</div>
+
+
+
+<!-- FLOATING BAG -->
+
+<button
+  onclick="openCart()"
+  style="
+    position:fixed;
+    right:22px;
+    bottom:22px;
+    z-index:8000;
+    width:58px;
+    height:58px;
+    border-radius:50%;
+    border:1px solid #555;
+    background:#fff;
+    color:#000;
+    cursor:pointer;
+    font-size:13px;
+    box-shadow:0 10px 35px #000;
+  ">
+
+  BAG
+  <span
+    id="floatingCount">
+    0
+  </span>
+
+</button>
+
+
+
+<!-- CART ITEM STYLE -->
+
+<style>
+
+.cart-item{
+  padding:20px 0;
+  border-bottom:1px solid #222;
+}
+
+.cart-item-top{
+  display:flex;
+  justify-content:space-between;
+  gap:15px;
+}
+
+.cart-item-name{
+  font-size:15px;
+}
+
+.cart-item-brand{
+  color:#666;
+  font-size:10px;
+  margin-top:6px;
+  letter-spacing:1px;
+}
+
+.cart-item-price{
+  font-size:14px;
+}
+
+.cart-controls{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  margin-top:15px;
+}
+
+.cart-controls button{
+  width:30px;
+  height:30px;
+  border:1px solid #444;
+  background:#111;
+  color:#fff;
+  cursor:pointer;
+}
+
+.remove-item{
+  margin-left:auto;
+  color:#777;
+  background:none!important;
+  border:0!important;
+  width:auto!important;
+}
+
+.empty-cart{
+  text-align:center;
+  padding:80px 20px;
+  color:#666;
+  line-height:1.8;
+}
+
+@media(max-width:650px){
+
+  #quickView > div{
+    grid-template-columns:1fr!important;
+    max-height:94vh;
+  }
+
+  #quickImage{
+    min-height:280px!important;
+  }
+
+  #quickView h2{
+    font-size:35px!important;
+  }
+
+}
+
+</style>
+
+
+
+<script>
+
+/* =========================================
+   PRODUCT + CART SYSTEM
+========================================= */
+
+let cart =
+  JSON.parse(
+    localStorage.getItem(
+      "modernNareeCart"
+    ) || "[]"
+  );
+
+
+let currentProduct = null;
+
+
+
+function saveCart(){
+
+  localStorage.setItem(
+    "modernNareeCart",
+    JSON.stringify(cart)
+  );
+
+  updateCartCount();
+
+  renderCart();
+
+}
+
+
+
+function updateCartCount(){
+
+  let total = 0;
+
+  cart.forEach(
+    function(item){
+
+      total += item.qty;
+
+    }
+  );
+
+
+  document
+    .getElementById(
+      "cartCount"
+    )
+    .innerText = total;
+
+
+  document
+    .getElementById(
+      "floatingCount"
+    )
+    .innerText = total;
+
+}
+
+
+
+function openProduct(
+  name,
+  brand,
+  price
+){
+
+  currentProduct = {
+    name:name,
+    brand:brand,
+    price:price
+  };
+
+
+  document
+    .getElementById(
+      "quickName"
+    )
+    .innerText = name;
+
+
+  document
+    .getElementById(
+      "quickBrand"
+    )
+    .innerText = brand;
+
+
+  document
+    .getElementById(
+      "quickPrice"
+    )
+    .innerText =
+    "₹" +
+    price.toLocaleString(
+      "en-IN"
+    );
+
+
+  let image =
+    document.getElementById(
+      "quickImage"
+    );
+
+
+  if(brand === "Modern Naree"){
+
+    image.style.background =
+      "linear-gradient(135deg,#d7c8b8,#75665a,#181614)";
+
+  }else{
+
+    image.style.background =
+      "repeating-linear-gradient(45deg,#625548 0 15px,#151311 15px 30px)";
+
+  }
+
+
+  document
+    .getElementById(
+      "quickView"
+    )
+    .style.display = "flex";
+
+}
+
+
+
+function closeProduct(){
+
+  document
+    .getElementById(
+      "quickView"
+    )
+    .style.display = "none";
+
+}
+
+
+
+function addCurrentProduct(){
+
+  if(!currentProduct){
+
+    return;
+
+  }
+
+
+  let existing =
+    cart.find(
+      function(item){
+
+        return item.name ===
+          currentProduct.name;
+
+      }
+    );
+
+
+  if(existing){
+
+    existing.qty++;
+
+  }else{
+
+    cart.push({
+
+      name:
+        currentProduct.name,
+
+      brand:
+        currentProduct.brand,
+
+      price:
+        currentProduct.price,
+
+      qty:1
+
+    });
+
+  }
+
+
+  saveCart();
+
+  closeProduct();
+
+  openCart();
+
+}
+
+
+
+function openCart(){
+
+  document
+    .getElementById(
+      "cartOverlay"
+    )
+    .style.display = "block";
+
+
+  setTimeout(
+    function(){
+
+      document
+        .getElementById(
+          "cartDrawer"
+        )
+        .style.transform =
+        "translateX(0)";
+
+    },
+    10
+  );
+
+
+  renderCart();
+
+}
+
+
+
+function closeCart(){
+
+  document
+    .getElementById(
+      "cartDrawer"
+    )
+    .style.transform =
+    "translateX(100%)";
+
+
+  setTimeout(
+    function(){
+
+      document
+        .getElementById(
+          "cartOverlay"
+        )
+        .style.display =
+        "none";
+
+    },
+    400
+  );
+
+}
+
+
+
+function renderCart(){
+
+  let box =
+    document.getElementById(
+      "cartItems"
+    );
+
+
+  let total =
+    document.getElementById(
+      "cartTotal"
+    );
+
+
+  if(cart.length === 0){
+
+    box.innerHTML = `
+
+      <div class="empty-cart">
+
+        Your bag is currently empty.
+
+        <br><br>
+
+        Explore our latest collection.
+
+      </div>
+
+    `;
+
+    total.innerText = "₹0";
+
+    return;
+
+  }
+
+
+  let html = "";
+
+  let grandTotal = 0;
+
+
+  cart.forEach(
+    function(item,index){
+
+      let itemTotal =
+        item.price *
+        item.qty;
+
+
+      grandTotal += itemTotal;
+
+
+      html += `
+
+        <div class="cart-item">
+
+          <div class="cart-item-top">
+
+            <div>
+
+              <div class="cart-item-name">
+                ${item.name}
+              </div>
+
+              <div class="cart-item-brand">
+                ${item.brand}
+              </div>
+
+            </div>
+
+            <div class="cart-item-price">
+              ₹${itemTotal.toLocaleString("en-IN")}
+            </div>
+
+          </div>
+
+
+          <div class="cart-controls">
+
+            <button
+              onclick="changeQty(${index},-1)">
+              −
+            </button>
+
+            <span>
+              ${item.qty}
+            </span>
+
+            <button
+              onclick="changeQty(${index},1)">
+              +
+            </button>
+
+
+            <button
+              class="remove-item"
+              onclick="removeItem(${index})">
+
+              REMOVE
+
+            </button>
+
+          </div>
+
+        </div>
+
+      `;
+
+    }
+  );
+
+
+  box.innerHTML = html;
+
+
+  total.innerText =
+    "₹" +
+    grandTotal.toLocaleString(
+      "en-IN"
+    );
+
+}
+
+
+
+function changeQty(
+  index,
+  amount
+){
+
+  if(!cart[index]){
+
+    return;
+
+  }
+
+
+  cart[index].qty += amount;
+
+
+  if(cart[index].qty <= 0){
+
+    cart.splice(index,1);
+
+  }
+
+
+  saveCart();
+
+}
+
+
+
+function removeItem(index){
+
+  cart.splice(
+    index,
+    1
+  );
+
+  saveCart();
+
+}
+
+
+
+function toggleWish(button){
+
+  if(
+    button.innerText.trim()
+    === "♡"
+  ){
+
+    button.innerText = "♥";
+
+  }else{
+
+    button.innerText = "♡";
+
+  }
+
+}
+
+
+
+updateCartCount();
+
+renderCart();
+
+
+/* =========================================
+   INTRO
+========================================= */
+
+function enterSite(){
+
+  document
+    .getElementById(
+      "intro"
+    )
+    .style.opacity = "0";
+
+
+  document
+    .getElementById(
+      "intro"
+    )
+    .style.pointerEvents =
+    "none";
+
+
+  setTimeout(
+    function(){
+
+      document
+        .getElementById(
+          "intro"
+        )
+        .remove();
+
+    },
+    700
+  );
+
+}
+
+
+/* PART 3 END */
+
+</script>
+<!-- =========================================
+     PART 4/5 — CHECKOUT + OFFER + WHATSAPP
+========================================= -->
+
+
+<!-- CHECKOUT -->
+
+<div
+  id="checkout"
+  style="
+    position:fixed;
+    inset:0;
+    z-index:10000;
+    background:rgba(0,0,0,.86);
+    backdrop-filter:blur(12px);
+    display:none;
+    align-items:center;
+    justify-content:center;
+    padding:20px;
+  ">
+
+  <div
+    style="
+      width:min(600px,100%);
+      max-height:92vh;
+      overflow:auto;
+      background:#101010;
+      border:1px solid #333;
+      padding:40px;
+      position:relative;
+    ">
+
+    <button
+      onclick="closeCheckout()"
+      style="
+        position:absolute;
+        right:18px;
+        top:15px;
+        width:38px;
+        height:38px;
+        border:1px solid #444;
+        background:#111;
+        color:#fff;
+        border-radius:50%;
+        font-size:22px;
+        cursor:pointer;
+      ">
+      ×
+    </button>
+
+
+    <div
+      style="
+        color:#777;
+        font-size:10px;
+        letter-spacing:4px;
+        margin-bottom:12px;
+      ">
+
+      FINAL STEP
+
+    </div>
+
+
+    <h2
+      style="
+        font-size:48px;
+        letter-spacing:-3px;
+        margin-bottom:35px;
+      ">
+
+      CHECKOUT
+
+    </h2>
+
+
+    <form
+      onsubmit="placeOrder(event)">
+
+
+      <input
+        id="customerName"
+        required
+        placeholder="Full Name"
+        style="
+          width:100%;
+          padding:16px;
+          margin-bottom:12px;
+          background:#171717;
+          border:1px solid #333;
+          color:#fff;
+          outline:none;
+        ">
+
+
+      <input
+        id="customerPhone"
+        required
+        type="tel"
+        placeholder="WhatsApp / Phone Number"
+        style="
+          width:100%;
+          padding:16px;
+          margin-bottom:12px;
+          background:#171717;
+          border:1px solid #333;
+          color:#fff;
+          outline:none;
+        ">
+
+
+      <textarea
+        id="customerAddress"
+        required
+        placeholder="Complete Delivery Address"
+        rows="4"
+        style="
+          width:100%;
+          padding:16px;
+          margin-bottom:12px;
+          background:#171717;
+          border:1px solid #333;
+          color:#fff;
+          outline:none;
+          resize:vertical;
+        "></textarea>
+
+
+      <input
+        id="customerCity"
+        required
+        placeholder="City / State / Pincode"
+        style="
+          width:100%;
+          padding:16px;
+          margin-bottom:12px;
+          background:#171717;
+          border:1px solid #333;
+          color:#fff;
+          outline:none;
+        ">
+
+
+      <select
+        id="customerPayment"
+        style="
+          width:100%;
+          padding:16px;
+          margin-bottom:20px;
+          background:#171717;
+          border:1px solid #333;
+          color:#fff;
+          outline:none;
+        ">
+
+        <option>
+          Cash on Delivery
+        </option>
+
+        <option>
+          UPI / Payment on WhatsApp
+        </option>
+
+      </select>
+
+
+      <button
+        type="submit"
+        style="
+          width:100%;
+          padding:18px;
+          border:0;
+          background:#fff;
+          color:#000;
+          cursor:pointer;
+          font-size:11px;
+          letter-spacing:2px;
+        ">
+
+        PLACE ORDER ON WHATSAPP →
+
+      </button>
+
+
+    </form>
+
+  </div>
+
+</div>
+
+
+
+<!-- OFFER POPUP -->
+
+<div
+  id="offerPopup"
+  style="
+    position:fixed;
+    inset:0;
+    z-index:11000;
+    background:rgba(0,0,0,.82);
+    backdrop-filter:blur(10px);
+    display:none;
+    align-items:center;
+    justify-content:center;
+    padding:20px;
+  ">
+
+  <div
+    style="
+      width:min(500px,100%);
+      background:#111;
+      border:1px solid #444;
+      padding:55px 35px;
+      text-align:center;
+      position:relative;
+    ">
+
+
+    <button
+      onclick="closeOffer()"
+      style="
+        position:absolute;
+        right:15px;
+        top:15px;
+        width:35px;
+        height:35px;
+        border:1px solid #444;
+        background:#111;
+        color:#fff;
+        border-radius:50%;
+        font-size:20px;
+        cursor:pointer;
+      ">
+
+      ×
+
+    </button>
+
+
+    <div
+      style="
+        color:#777;
+        font-size:10px;
+        letter-spacing:4px;
+      ">
+
+      WELCOME TO THE EDIT
+
+    </div>
+
+
+    <div
+      style="
+        font-size:70px;
+        font-weight:900;
+        letter-spacing:-5px;
+        margin:20px 0;
+      ">
+
+      10%
+
+    </div>
+
+
+    <h3
+      style="
+        font-size:20px;
+        margin-bottom:12px;
+      ">
+
+      OFF YOUR FIRST ORDER
+
+    </h3>
+
+
+    <p
+      style="
+        color:#888;
+        font-size:13px;
+        line-height:1.7;
+      ">
+
+      Use the exclusive welcome
+      code below while placing
+      your order.
+
+    </p>
+
+
+    <div
+      style="
+        display:inline-block;
+        margin:25px 0;
+        padding:14px 25px;
+        border:1px dashed #666;
+        font-size:18px;
+        letter-spacing:3px;
+      ">
+
+      WELCOME10
+
+    </div>
+
+
+    <button
+      onclick="
+      closeOffer();
+      document
+      .getElementById('collection')
+      .scrollIntoView({behavior:'smooth'});
+      "
+      style="
+        display:block;
+        width:100%;
+        padding:16px;
+        border:0;
+        background:#fff;
+        color:#000;
+        cursor:pointer;
+        letter-spacing:2px;
+        font-size:11px;
+      ">
+
+      SHOP COLLECTION →
+
+    </button>
+
+
+  </div>
+
+</div>
+
+
+
+<!-- FLOATING WHATSAPP -->
+
+<a
+  href="https://wa.me/919582907643"
+  target="_blank"
+  style="
+    position:fixed;
+    left:20px;
+    bottom:22px;
+    z-index:8000;
+    width:58px;
+    height:58px;
+    border-radius:50%;
+    background:#fff;
+    color:#000;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:11px;
+    font-weight:bold;
+    box-shadow:0 10px 35px #000;
+    border:1px solid #555;
+  ">
+
+  WA
+
+</a>
+
+
+
+<script>
+
+/* =========================================
+   CHECKOUT FUNCTIONS
+========================================= */
+
+
+function openCheckout(){
+
+  if(cart.length === 0){
+
+    alert(
+      "Your bag is empty. Please add a product first."
+    );
+
+    return;
+
+  }
+
+
+  document
+    .getElementById(
+      "checkout"
+    )
+    .style.display =
+    "flex";
+
+}
+
+
+
+function closeCheckout(){
+
+  document
+    .getElementById(
+      "checkout"
+    )
+    .style.display =
+    "none";
+
+}
+
+
+
+/* =========================================
+   WHATSAPP ORDER
+========================================= */
+
+
+function placeOrder(event){
+
+  event.preventDefault();
+
+
+  if(cart.length === 0){
+
+    alert(
+      "Your bag is empty."
+    );
+
+    return;
+
+  }
+
+
+  let name =
+    document
+    .getElementById(
+      "customerName"
+    )
+    .value.trim();
+
+
+  let phone =
+    document
+    .getElementById(
+      "customerPhone"
+    )
+    .value.trim();
+
+
+  let address =
+    document
+    .getElementById(
+      "customerAddress"
+    )
+    .value.trim();
+
+
+  let city =
+    document
+    .getElementById(
+      "customerCity"
+    )
+    .value.trim();
+
+
+  let payment =
+    document
+    .getElementById(
+      "customerPayment"
+    )
+    .value;
+
+
+  let message =
+    "Hello Modern Naree × Pattern Vali 👋"
+    + "\n\n"
+    + "NEW ORDER"
+    + "\n"
+    + "--------------------"
+    + "\n";
+
+
+  let total = 0;
+
+
+  cart.forEach(
+    function(item,index){
+
+      let itemTotal =
+        item.price *
+        item.qty;
+
+
+      total += itemTotal;
+
+
+      message +=
+        "\n" +
+        (index + 1) +
+        ". " +
+        item.name +
+        "\n" +
+        "Brand: " +
+        item.brand +
+        "\n" +
+        "Qty: " +
+        item.qty +
+        "\n" +
+        "Price: ₹" +
+        itemTotal.toLocaleString(
+          "en-IN"
+        ) +
+        "\n";
+
+    }
+  );
+
+
+  message +=
+    "\n--------------------"
+    + "\n"
+    + "TOTAL: ₹" +
+    total.toLocaleString(
+      "en-IN"
+    )
+    + "\n\n"
+    + "CUSTOMER DETAILS"
+    + "\n"
+    + "Name: " +
+    name
+    + "\n"
+    + "Phone: " +
+    phone
+    + "\n"
+    + "Address: " +
+    address
+    + "\n"
+    + "City: " +
+    city
+    + "\n"
+    + "Payment: " +
+    payment
+    + "\n\n"
+    + "Please confirm my order.";
+
+
+  let whatsappURL =
+    "https://wa.me/919582907643?text="
+    +
+    encodeURIComponent(
+      message
+    );
+
+
+  window.open(
+    whatsappURL,
+    "_blank"
+  );
+
+
+  cart = [];
+
+
+  saveCart();
+
+
+  closeCheckout();
+
+  closeCart();
+
+
+  document
+    .querySelector(
+      "#customerName"
+    )
+    .value = "";
+
+
+  document
+    .querySelector(
+      "#customerPhone"
+    )
+    .value = "";
+
+
+  document
+    .querySelector(
+      "#customerAddress"
+    )
+    .value = "";
+
+
+  document
+    .querySelector(
+      "#customerCity"
+    )
+    .value = "";
+
+
+}
+
+
+
+/* =========================================
+   OFFER
+========================================= */
+
+
+function closeOffer(){
+
+  document
+    .getElementById(
+      "offerPopup"
+    )
+    .style.display =
+    "none";
+
+
+  sessionStorage.setItem(
+    "offerSeen",
+    "yes"
+  );
+
+}
+
+
+
+/* =========================================
+   SHOW OFFER ONCE
+========================================= */
+
+
+setTimeout(
+  function(){
+
+    if(
+      !sessionStorage.getItem(
+        "offerSeen"
+      )
+    ){
+
+      document
+        .getElementById(
+          "offerPopup"
+        )
+        .style.display =
+        "flex";
+
+    }
+
+  },
+  1800
+);
+
+
+
+/* =========================================
+   ESC KEY
+========================================= */
+
+
+document.addEventListener(
+  "keydown",
+  function(event){
+
+    if(
+      event.key === "Escape"
+    ){
+
+      closeProduct();
+
+      closeCart();
+
+      closeCheckout();
+
+      closeOffer();
+
+    }
+
+  }
+);
+
+
+/* PART 4 END */
+
+</script>
+<!-- PART 5 START -->
+
+<style>
+/* FINAL PREMIUM POLISH */
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  overflow-x:hidden;
+}
+
+section{
+  scroll-margin-top:90px;
+}
+
+.card,
+.brand-card,
+.contact-card,
+.about-card{
+  transition:transform .35s ease, box-shadow .35s ease, border-color .35s ease;
+}
+
+.card:hover,
+.brand-card:hover,
+.contact-card:hover,
+.about-card:hover{
+  transform:translateY(-6px);
+  box-shadow:0 18px 45px rgba(0,0,0,.35);
+}
+
+button,
+a{
+  -webkit-tap-highlight-color:transparent;
+}
+
+button{
+  transition:transform .2s ease, opacity .2s ease, background .2s ease;
+}
+
+button:active{
+  transform:scale(.96);
+}
+
+/* Reveal animation */
+.reveal{
+  opacity:0;
+  transform:translateY(25px);
+  transition:opacity .7s ease, transform .7s ease;
+}
+
+.reveal.show{
+  opacity:1;
+  transform:translateY(0);
+}
+
+/* Back to top */
+#topBtn{
+  position:fixed;
+  right:18px;
+  bottom:82px;
+  width:44px;
+  height:44px;
+  border-radius:50%;
+  border:1px solid rgba(255,255,255,.2);
+  background:#111;
+  color:#fff;
+  display:none;
+  align-items:center;
+  justify-content:center;
+  z-index:999;
+  cursor:pointer;
+  font-size:18px;
+  box-shadow:0 8px 25px rgba(0,0,0,.35);
+}
+
+#topBtn.show{
+  display:flex;
+}
+
+#topBtn:hover{
+  background:#222;
+}
+
+/* Mobile final polish */
+@media(max-width:600px){
+
+  .hero{
+    min-height:92vh;
+  }
+
+  .hero h1{
+    font-size:clamp(38px,12vw,62px);
+    line-height:1;
+  }
+
+  .hero p{
+    font-size:14px;
+    line-height:1.6;
+  }
+
+  .card{
+    min-width:0;
+  }
+
+  .product-grid{
+    grid-template-columns:repeat(2,1fr);
+    gap:12px;
+  }
+
+  .card-info h3{
+    font-size:14px;
+  }
+
+  .card-info p{
+    font-size:12px;
+  }
+
+  .section-title{
+    font-size:32px;
+  }
+
+  #topBtn{
+    right:14px;
+    bottom:78px;
+  }
+}
+</style>
+
+<!-- BACK TO TOP -->
+<button id="topBtn" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+
+<script>
+/* FINAL INTERACTION POLISH */
+
+const revealElements = document.querySelectorAll(
+  "section, .card, .brand-card, .contact-card, .about-card"
+);
+
+const revealObserver = new IntersectionObserver(
+  (entries)=>{
+    entries.forEach(entry=>{
+      if(entry.isIntersecting){
+        entry.target.classList.add("reveal","show");
+      }
+    });
+  },
+  {threshold:0.12}
+);
+
+revealElements.forEach(el=>{
+  revealObserver.observe(el);
+});
+
+/* Back to top visibility */
+window.addEventListener("scroll",()=>{
+  const topBtn=document.getElementById("topBtn");
+
+  if(window.scrollY>500){
+    topBtn.classList.add("show");
+  }else{
+    topBtn.classList.remove("show");
+  }
+});
+
+/* Close overlays when clicking outside */
+document.addEventListener("click",(e)=>{
+
+  const product=document.getElementById("quickView");
+  const cart=document.getElementById("cartOverlay");
+  const checkout=document.getElementById("checkout");
+  const offer=document.getElementById("offerPopup");
+
+  if(e.target===product){
+    closeProduct();
+  }
+
+  if(e.target===cart){
+    closeCart();
+  }
+
+  if(e.target===checkout){
+    closeCheckout();
+  }
+
+  if(e.target===offer){
+    closeOffer();
+  }
+});
+
+console.log("Modern Naree × Pattern Vali — Website Loaded Successfully");
+</script>
+
+<!-- PART 5 END -->
+
+</body>
+</html>
